@@ -1,0 +1,36 @@
+doctype html
+html
+head
+// BootStrap
+link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+// CSS Icons
+//link(rel='stylesheet', href='https://www.w3schools.com/w3css/4/w3.css')
+link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')
+style
+        include index.css
+body
+.container()
+    h1.text-center Enter Student Details here
+    form(action = "/details", method = "POST")
+        .form-group
+            label Class-ID:
+            input.form-control(type='text', name='id')
+        .form-group
+            label First Name:
+            input.form-control(type='text', name='fname')
+        .form-group
+            label Last Name:
+            input.form-control(type='text', name='lname')
+        .form-group
+            label Course:
+            input.form-control(type='text', name='course')
+        .form-group
+            label Major:
+            input.form-control(type='text', name='major')
+        .form-group
+            label Minor:
+            input.form-control(type='text', name='minor')
+        .text-center
+        button(type = "submit") Submit
